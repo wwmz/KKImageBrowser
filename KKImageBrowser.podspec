@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KKImageBrowser'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'A very useful picture preview tool. (Anti-WeChat picture preview)'
 
 # This description is used to generate tags and improve search results.
@@ -43,5 +43,5 @@ Pod::Spec.new do |s|
           'KKImageBrowser/Classes/KKImageBrowserModel.h',
   ]
   s.frameworks = 'UIKit'
-  s.dependency 'SDWebImage', '~> 5.0.1'
+  s.dependency 'SDWebImage'
 end
