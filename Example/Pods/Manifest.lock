@@ -1,13 +1,13 @@
 PODS:
   - KKImageBrowser (0.1.4):
     - SDWebImage
-  - SDWebImage (5.0.6):
-    - SDWebImage/Core (= 5.0.6)
-  - SDWebImage/Core (5.0.6)
+  - SDWebImage (5.8.4):
+    - SDWebImage/Core (= 5.8.4)
+  - SDWebImage/Core (5.8.4)
 
 DEPENDENCIES:
   - KKImageBrowser (from `../`)
-  - SDWebImage (~> 5.0.1)
+  - SDWebImage (~> 5.8.0)
 
 SPEC REPOS:
   trunk:
@@ -19,8 +19,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   KKImageBrowser: c79cd38aabe743fcdb62c22e7bae6bb7223109a0
-  SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
+  SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
 
-PODFILE CHECKSUM: 6431c86d5c8c3c231f81f578c4245f421ca10c6d
+PODFILE CHECKSUM: 06a9beb0607f8fa378d195d118693fbf911e3cb0
 
 COCOAPODS: 1.11.3
