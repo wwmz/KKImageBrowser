@@ -202,8 +202,14 @@
     NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:point];
     KKImageBrowserModel *cellModel = self.images[indexPath.row];
     self.weakView = cellModel.toView;
-    UIImage *placeholderImage = self.placeholderImage;
-    [self.placeholderView sd_setImageWithURL:cellModel.url placeholderImage:placeholderImage];
+    //设置占位图片
+    if (cellModel.image) {
+        [self.placeholderView setImage:cellModel.image];
+    }else{
+        UIImage *placeholderImage = self.placeholderImage;
+        [self.placeholderView sd_setImageWithURL:cellModel.url placeholderImage:placeholderImage];
+    }
+    
     if (self.whenNeedUpdateIndex) {
         self.whenNeedUpdateIndex(indexPath.row);
     }
