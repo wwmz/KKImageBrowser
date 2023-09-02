@@ -1,6 +1,6 @@
 {
   "name": "KKImageBrowser",
-  "version": "0.1.4",
+  "version": "0.1.7",
   "summary": "A very useful picture preview tool. (Anti-WeChat picture preview)",
   "description": "A very useful picture preview tool. (Anti-WeChat picture preview)\n一个非常实用的图片预览工具。（防微信图片预览）",
   "homepage": "https://github.com/HansenCCC/KKImageBrowser",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/HansenCCC/KKImageBrowser.git",
-    "tag": "0.1.4"
+    "tag": "0.1.7"
   },
   "platforms": {
     "ios": "9.0"

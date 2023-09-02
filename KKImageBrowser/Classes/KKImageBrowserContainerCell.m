@@ -62,6 +62,25 @@
     [self.tapOneGestureRecognizer requireGestureRecognizerToFail:self.tapTwoGestureRecognizer];
     [self.tapOneGestureRecognizer requireGestureRecognizerToFail:self.panGestureRecognizer];
     [self.tapTwoGestureRecognizer requireGestureRecognizerToFail:self.panGestureRecognizer];
+    
+    UILongPressGestureRecognizer *longTap = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longAction:)];
+}
+
+- (void)longAction:(UILongPressGestureRecognizer*)ta{
+    if(ta.state == UIGestureRecognizerStateEnded){
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+        [alert addAction:[UIAlertAction actionWithTitle:@"保存图片" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            UIImageWriteToSavedPhotosAlbum(self.browserImageView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), (__bridge void *)self);
+        }]];
+        [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+        }]];
+        [UIApplication.sharedApplication.keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+    }
+}
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo{
+    
+    NSLog(@"image = %@, error = %@, contextInfo = %@", image, error, contextInfo);
 }
 
 //单击手势
